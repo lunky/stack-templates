@@ -47,6 +47,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - hspec
+    - QuickCheck
     - {{name}}
 
 {-# START_FILE Setup.hs #-}
@@ -60,6 +61,7 @@ main = defaultMain
 module LibSpec where
 import Lib
 import Test.Hspec
+import Test.QuickCheck
 
 spec :: Spec
 spec = do
@@ -131,3 +133,26 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 {-# START_FILE .gitignore #-}
 .stack-work/
 *~
+aoc2019.cabal
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*

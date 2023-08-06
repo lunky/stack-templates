@@ -25,6 +25,9 @@ dependencies:
 
 library:
   source-dirs: src
+  when:
+  - condition: false
+    other-modules: Paths_kata  
 
 executables:
   {{name}}-exe:
@@ -47,6 +50,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - hspec
+    - hspec-discover
     - QuickCheck
     - {{name}}
 
